@@ -4,7 +4,7 @@ using namespace std;
 
 class MinHeap {
 private:
-	int heap[100];
+	int* heap=new int[1];
 	int size;
 
 	void swap(int& a, int& b) {
@@ -36,8 +36,9 @@ private:
 	}
 
 public:
-	MinHeap() {
+	MinHeap(int n) {
 		size = 0;
+                heap=new int[n];
 	}
 
 	void push(int val) {
@@ -61,7 +62,7 @@ int main() {
 	int n;
 	cin >> n;
 
-	int a[100];
+	int* a=new int[n];
 	for (int i = 0; i < n; i++)
 		cin >> a[i];
 
